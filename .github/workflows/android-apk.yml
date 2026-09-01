@@ -44,12 +44,12 @@ jobs:
       - name: Prepare APK
         run: |
           mkdir -p dist
-          cp android/app/build/outputs/apk/debug/app-debug.apk dist/TimeCC-v1.0-debug.apk
-          sha256sum dist/TimeCC-v1.0-debug.apk > dist/TimeCC-v1.0-debug.apk.sha256
+          cp android/app/build/outputs/apk/debug/app-debug.apk dist/TimeCC-v1.1-debug.apk
+          sha256sum dist/TimeCC-v1.1-debug.apk > dist/TimeCC-v1.1-debug.apk.sha256
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TimeCC-v1.0-debug
+          name: TimeCC-v1.1-debug
           path: dist/
           if-no-files-found: error
